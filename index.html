@@ -9,6 +9,16 @@
   <meta name="author" content="">
 
   <title>Overwatch 2</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156902921-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156902921-2');
+  </script>
+
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,13 +46,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="#about">Explore</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+            <a class="nav-link js-scroll-trigger" href="#projects">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#signup">Contato</a>
           </li>
         </ul>
       </div>
@@ -135,16 +145,13 @@
         <div class="col-md-10 col-lg-8 mx-auto text-center">
 
           <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+          <h2 class="text-white mb-5">Se inscreva para receber as novidades!</h2>
 
           <form class="form-inline d-flex">
-            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailTxt" placeholder="Digite seu endereço de email...">
+            <button type="button" class="btn btn-primary mx-auto " onclick="enviar()">Increva-se</button>
           </form>
-
-        </div>
-      </div>
-    </div>
+          
   </section>
 
   <!-- Contact Section -->
@@ -157,9 +164,9 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Address</h4>
+              <h4 class="text-uppercase m-0">Endereço</h4>
               <hr class="my-4">
-              <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+              <div class="small text-black-50">Blizzard Way, Irvine, CA, EUA</div>
             </div>
           </div>
         </div>
@@ -171,7 +178,7 @@
               <h4 class="text-uppercase m-0">Email</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-                <a href="#">hello@yourdomain.com</a>
+                <a href="#">luana_limas@hotmail.com</a>
               </div>
             </div>
           </div>
@@ -181,22 +188,22 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-mobile-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Phone</h4>
+              <h4 class="text-uppercase m-0">Instagram</h4>
               <hr class="my-4">
-              <div class="small text-black-50">+1 (555) 902-8832</div>
+              <div class="small text-black-50"><a href="https://www.instagram.com/luanaalimaa/" target="_blank">@luanaalimaa</a></div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="social d-flex justify-content-center">
-        <a href="#" class="mx-2">
+        <a href="https://twitter.com/Blizzard_Ent" class="mx-2" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="#" class="mx-2">
+        <a href="https://www.facebook.com/Blizzard" class="mx-2" target="_blank">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="#" class="mx-2">
+        <a href="https://github.com/LuanaL1ma" class="mx-2" target="_blank">
           <i class="fab fa-github"></i>
         </a>
       </div>
@@ -219,8 +226,25 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
+  <script src="js/email.js"></script>
   <script src="js/grayscale.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAATOmk1jtfft0vbHYZUtKEIFQCWV69lrk",
+      authDomain: "overwatch2-c162f.firebaseapp.com",
+      databaseURL: "https://overwatch2-c162f.firebaseio.com",
+      projectId: "overwatch2-c162f",
+      storageBucket: "overwatch2-c162f.appspot.com",
+      messagingSenderId: "849921210701",
+      appId: "1:849921210701:web:6295e9b9fd7dbd0a3d5f04"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </body>
 
 </html>
